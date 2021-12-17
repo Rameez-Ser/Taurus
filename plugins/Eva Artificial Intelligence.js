@@ -27,7 +27,7 @@ let wk = conf.WORKTYPE == 'public' ? false : true
 var vtalk_dsc = ''
 var reply_eva = ''
 if (conf.LANG == 'TR') vtalk_dsc = 'Eva sesli sohbetini başlatır.', reply_eva = '*Herhangi Bir Sesli Mesaja Yanıt Verin!*'
-if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Pikachu voice chat.', reply_eva = '*Reply to Any Voice Message!*'
+if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Taurus voice chat.', reply_eva = '*Reply to Any Voice Message!*'
 if (conf.LANG == 'AZ') vtalk_dsc = 'Eva səsli söhbətinə başlayır.', reply_eva = '*Hər hansı bir səsli mesaja cavab verin!*'
 if (conf.LANG == 'PT') vtalk_dsc = 'Começa o bate-papo por voz de Eva.', reply_eva = '*Responder a qualquer mensagem de voz!*'
 if (conf.LANG == 'RU') vtalk_dsc = 'Запускает голосовой чат Eva.', reply_eva = '*Ответьте на любое голосовое сообщение!*'
@@ -232,18 +232,18 @@ var already_off = ''
 var succ_on = ''
 var succ_off = ''
 if (conf.LANG == 'TR') {
-    fulleva_dsc = 'Tam fonksiyonel Pikachu özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
-    already_on = 'Pikachu yapay zekası halihazırda tüm fonksiyonları etkin.'
-    already_off = 'Pikachu yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
-    succ_on = 'Pikachu, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
-    succ_off = 'Pikachu, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
+    fulleva_dsc = 'Tam fonksiyonel Taurus özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
+    already_on = 'Taurus yapay zekası halihazırda tüm fonksiyonları etkin.'
+    already_off = 'Taurus yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
+    succ_on = 'Taurus, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
+    succ_off = 'Taurus, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
 }
 if (conf.LANG == 'EN') {
-    fulleva_dsc = 'Activates full functional Pikachu features. Turn your account into a ai chatbot!'
-    already_on = 'Pikachu artificial intelligence is already fully functional.'
-    already_off = 'Pikachu artificial intelligence is currently running semi-functional.'
-    succ_on = 'Pikachu Opened Fully Functionally! Please wait a bit! ✅'
-    succ_off = 'Pikachu Set to Semi-Functional! Please wait a bit! ☑️'
+    fulleva_dsc = 'Activates full functional Taurus features. Turn your account into a ai chatbot!'
+    already_on = 'Taurus artificial intelligence is already fully functional.'
+    already_off = 'Taurus artificial intelligence is currently running semi-functional.'
+    succ_on = 'Taurus Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Taurus Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'ML') {
     fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
@@ -253,7 +253,7 @@ if (conf.LANG == 'ML') {
     succ_off = 'സെമി-ഫങ്ഷണൽ ആയി സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 
-Asena.addCommand({ pattern: 'chatbot ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.chatbot on / off' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'taurus ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.chatbot on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULLEVA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {
